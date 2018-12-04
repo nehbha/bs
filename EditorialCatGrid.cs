@@ -1,4 +1,4 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
 //
@@ -168,7 +168,7 @@ ICollection editorial_categories_CreateDataSource() {
 	if(Utility.GetParam("Formeditorial_categories_Sorting").Length>0&&!IsPostBack)
 	{ViewState["SortColumn"]=Utility.GetParam("Formeditorial_categories_Sorting");
 	 ViewState["SortDir"]="ASC";}
-	if(ViewState["SortColumn"]!=null) sOrder = "ORDER BY @SortColumn @SortDir";
+	if(ViewState["SortColumn"]!=null) sOrder = " ORDER BY " + ViewState["SortColumn"].ToString()+" "+ViewState["SortDir"].ToString();
 	
 	System.Collections.Specialized.StringDictionary Params =new System.Collections.Specialized.StringDictionary();
 	
@@ -205,14 +205,12 @@ ICollection editorial_categories_CreateDataSource() {
 	    iTmpI = editorial_categories_sCountSQL.ToLower().IndexOf(" order by");
 	    if (iTmpI > 1) editorial_categories_sCountSQL = editorial_categories_sCountSQL.Substring(0, iTmpI);
 	  }
-	  
-	  
-	//-------------------------------
-	
-	OleDbDataAdapter command = new OleDbDataAdapter(editorial_categories_sSQL, Utility.Connection);
-        command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@SortColumn", viewstate["SortColumn"]));
-        command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@SortDir", viewstate["SortDir"]));
 
+            System.Data.SqlClient.SqlDataAdapter c;
+
+	//-------------------------------
+   
+	OleDbDataAdapter command = new OleDbDataAdapter(editorial_categories_sSQL, Utility.Connection);
 	DataSet ds = new DataSet();
 	
 	command.Fill(ds, (i_editorial_categories_curpage - 1) * editorial_categories_PAGENUM, editorial_categories_PAGENUM,"editorial_categories");

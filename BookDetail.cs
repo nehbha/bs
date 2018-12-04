@@ -1,6 +1,7 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
+
 //
 //    Filename: BookDetail.cs
 //    Generated with CodeCharge 2.0.5
@@ -94,11 +95,6 @@ protected String[] Rating_rating_lov = "1;Deficient;2;Regular;3;Good;4;Very Good
 		}
 	}
 
- /// <summary>
- /// Page_Unload
- /// </summary>
- /// <param name="sender">the sender</param>
- /// <param name="e">args</param>
 	protected void Page_Unload(object sender, EventArgs e)
 	{
 		//
@@ -184,10 +180,8 @@ void Detail_Show() {
 		
 // Detail Open Event begin
 // Detail Open Event end
-		string sSQL = "select * from items where @sWhere";
+		string sSQL = "select * from items where " + sWhere;
 		OleDbDataAdapter dsCommand = new OleDbDataAdapter(sSQL, Utility.Connection);
-                dsCommand.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@sWhere", sWhere);
-
 		DataSet ds = new DataSet();
 		DataRow row;
 
@@ -321,10 +315,8 @@ void Order_Show() {
 		
 // Order Open Event begin
 // Order Open Event end
-		string sSQL = "select * from orders where @sWhere";
+		string sSQL = "select * from orders where " + sWhere;
 		OleDbDataAdapter dsCommand = new OleDbDataAdapter(sSQL, Utility.Connection);
-                dsCommand.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@sWhere", sWhere);
-
 		DataSet ds = new DataSet();
 		DataRow row;
 
@@ -477,10 +469,8 @@ void Rating_Show() {
 		
 // Rating Open Event begin
 // Rating Open Event end
-		string sSQL = "select * from items where @sWhere";
+		string sSQL = "select * from items where " + sWhere;
 		OleDbDataAdapter dsCommand = new OleDbDataAdapter(sSQL, Utility.Connection);
-                dsCommand.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@sWhere", sWhere));
-
 		DataSet ds = new DataSet();
 		DataRow row;
 

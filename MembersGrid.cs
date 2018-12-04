@@ -1,4 +1,4 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
 //
@@ -216,7 +216,7 @@ ICollection Members_CreateDataSource() {
 	if(Utility.GetParam("FormMembers_Sorting").Length>0&&!IsPostBack)
 	{ViewState["SortColumn"]=Utility.GetParam("FormMembers_Sorting");
 	 ViewState["SortDir"]="ASC";}
-	if(ViewState["SortColumn"]!=null) sOrder = "ORDER BY @SortColumn @SortDir";
+	if(ViewState["SortColumn"]!=null) sOrder = " ORDER BY " + ViewState["SortColumn"].ToString()+" "+ViewState["SortDir"].ToString();
 	
 	//-------------------------------
 	// Build WHERE statement
@@ -282,9 +282,6 @@ ICollection Members_CreateDataSource() {
 	//-------------------------------
 	
 	OleDbDataAdapter command = new OleDbDataAdapter(Members_sSQL, Utility.Connection);
-    command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@SortColumn", viewstate["SortColumn"]));
-    command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@SortDir", viewstate["SortDir"]));
-
 	DataSet ds = new DataSet();
 	
 	command.Fill(ds, (i_Members_curpage - 1) * Members_PAGENUM, Members_PAGENUM,"Members");
