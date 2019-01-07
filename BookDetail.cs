@@ -1,6 +1,7 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
+
 //
 //    Filename: BookDetail.cs
 //    Generated with CodeCharge 2.0.5
@@ -94,11 +95,6 @@ protected String[] Rating_rating_lov = "1;Deficient;2;Regular;3;Good;4;Very Good
 		}
 	}
 
- /// <summary>
- /// Page_Unload
- /// </summary>
- /// <param name="sender">the sender</param>
- /// <param name="e">args</param>
 	protected void Page_Unload(object sender, EventArgs e)
 	{
 		//

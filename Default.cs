@@ -1,4 +1,4 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
 //
@@ -124,6 +124,9 @@ namespace Book_Store
         protected void Page_Load(object sender, EventArgs e)
         {	
 		Utility=new CCUtility(this);
+
+        Utility = new CCUtility(this);
+        Utility = new CCUtility(this);
 		//===============================
 // Default Open Event begin
 // Default Open Event end

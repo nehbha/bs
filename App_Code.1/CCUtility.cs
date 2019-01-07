@@ -113,7 +113,7 @@ namespace Book_Store
 			if (row[field].ToString() == null)
 				return "";
 			else
-				return row[field].ToString();
+				return Server.HtmlEncode(row[field].ToString());
 		}
 
         public OleDbConnection Connection;
@@ -182,14 +182,18 @@ namespace Book_Store
 		}
 
 		reader.Close();
-		return sReturn;
+		return Server.HTMLEncode(sReturn);
 	}
 
 	public int DlookupInt(string table, string field, string sWhere)
 	{
-		string sSQL = "SELECT " + field + " FROM " + table + " WHERE " + sWhere;
+		string sSQL = "SELECT @field FROM @table WHERE @sWhere;
 
 		OleDbCommand command = new OleDbCommand(sSQL, Connection);
+                command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@field", field);
+                command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@table", table);
+                command.SelectCommand.Parameters.Add(new System.Data.OleDb.OleDbParameter("@sWhere", sWhere);
+
 		OleDbDataReader reader=command.ExecuteReader(CommandBehavior.SingleRow);
 		int iReturn = -1;
 

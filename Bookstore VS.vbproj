@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{DF79D6FA-5338-4779-8CE3-8AF87E5DFD84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Bookstore_VS</RootNamespace>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminBooks.aspx" />
+    <Content Include="AdminBooks.cs" />
+    <Content Include="AdminMenu.aspx" />
+    <Content Include="AdminMenu.cs" />
+    <Content Include="AdvSearch.aspx" />
+    <Content Include="AdvSearch.cs" />
+    <Content Include="App_Code\AssemblyInfo.cs" />
+    <Content Include="App_Code\CCUtility.cs" />
+    <Content Include="App_Code\Global.asax.cs" />
+    <Content Include="App_Code\Migrated\CCPager_cs_PagingData.cs" />
+    <Content Include="BookDetail.aspx" />
+    <Content Include="BookDetail.cs" />
+    <Content Include="BookMaint.aspx" />
+    <Content Include="BookMaint.cs" />
+    <Content Include="Books.aspx" />
+    <Content Include="Books.cs" />
+    <Content Include="CardTypesGrid.aspx" />
+    <Content Include="CardTypesGrid.cs" />
+    <Content Include="CardTypesRecord.aspx" />
+    <Content Include="CardTypesRecord.cs" />
+    <Content Include="CategoriesGrid.aspx" />
+    <Content Include="CategoriesGrid.cs" />
+    <Content Include="CategoriesRecord.aspx" />
+    <Content Include="CategoriesRecord.cs" />
+    <Content Include="CCPager.ascx" />
+    <Content Include="CCPager.cs" />
+    <Content Include="CxResults.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="Default.cs" />
+    <Content Include="EditorialCatGrid.aspx" />
+    <Content Include="EditorialCatGrid.cs" />
+    <Content Include="EditorialCatRecord.aspx" />
+    <Content Include="EditorialCatRecord.cs" />
+    <Content Include="EditorialsGrid.aspx" />
+    <Content Include="EditorialsGrid.cs" />
+    <Content Include="EditorialsRecord.aspx" />
+    <Content Include="EditorialsRecord.cs" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Footer.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Header.ascx" />
+    <Content Include="Header.cs" />
+    <Content Include="images\1stars.gif" />
+    <Content Include="images\2stars.gif" />
+    <Content Include="images\3stars.gif" />
+    <Content Include="images\4stars.gif" />
+    <Content Include="images\5stars.gif" />
+    <Content Include="images\books\0072122420.jpg" />
+    <Content Include="images\books\020135358X.gif" />
+    <Content Include="images\books\0201354934.jpg" />
+    <Content Include="images\books\0596000278.jpg" />
+    <Content Include="images\books\0672317842.jpg" />
+    <Content Include="images\books\0672317966.jpg" />
+    <Content Include="images\books\0735609667.jpg" />
+    <Content Include="images\books\0735709211.jpg" />
+    <Content Include="images\books\0735709491.jpg" />
+    <Content Include="images\books\0735709971.jpg" />
+    <Content Include="images\books\0761530169.jpg" />
+    <Content Include="images\books\0782127738.jpg" />
+    <Content Include="images\books\0789724405.jpg" />
+    <Content Include="images\books\0879304979.gif" />
+    <Content Include="images\books\1565924347.jpg" />
+    <Content Include="images\books\1565925157.jpg" />
+    <Content Include="images\books\1861002726.jpg" />
+    <Content Include="images\books\1861003382.jpg" />
+    <Content Include="images\books\1861004656.jpg" />
+    <Content Include="images\books\1861004877.jpg" />
+    <Content Include="images\books\1884133193.gif" />
+    <Content Include="images\books\1884777996.jpg" />
+    <Content Include="images\icon_admin.gif" />
+    <Content Include="images\icon_home.gif" />
+    <Content Include="images\icon_reg.gif" />
+    <Content Include="images\icon_shop.gif" />
+    <Content Include="images\icon_sign.gif" />
+    <Content Include="images\Logo_bookstore.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Login.cs" />
+    <Content Include="MembersGrid.aspx" />
+    <Content Include="MembersGrid.cs" />
+    <Content Include="MembersInfo.aspx" />
+    <Content Include="MembersInfo.cs" />
+    <Content Include="MembersRecord.aspx" />
+    <Content Include="MembersRecord.cs" />
+    <Content Include="MyInfo.aspx" />
+    <Content Include="MyInfo.cs" />
+    <Content Include="OrdersGrid.aspx" />
+    <Content Include="OrdersGrid.cs" />
+    <Content Include="OrdersRecord.aspx" />
+    <Content Include="OrdersRecord.cs" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Registration.cs" />
+    <Content Include="Service1.svc" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="ShoppingCart.cs" />
+    <Content Include="ShoppingCartRecord.aspx" />
+    <Content Include="ShoppingCartRecord.cs" />
+    <Content Include="SQL\BookStore_MSSQL.sql" />
+    <Content Include="SQL\BookStore_MySQL.sql" />
+    <Content Include="UpgradeLog.XML" />
+    <Content Include="UpgradeLog2.XML" />
+    <Content Include="UpgradeLog3.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BookStoreImages.zip" />
+    <None Include="CxSourceHash._cx_" />
+    <None Include="images\books\Thumbs.db" />
+    <None Include="images\images\Thumbs.db" />
+    <None Include="MethodsMapping.zip" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
