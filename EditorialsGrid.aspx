@@ -1,4 +1,4 @@
-<%@ Page language="c#" Inherits="Book_Store.EditorialsGrid" CodeFile="EditorialsGrid.cs" %>
+﻿<%@ Page language="c#" Inherits="Book_Store.EditorialsGrid" CodeFile="EditorialsGrid.cs" %>
 <%@ Register TagPrefix="CC" TagName="Header" Src="Header.ascx" %><%@ Register TagPrefix="CC" TagName="Footer" Src="Footer.ascx" %><%@Register TagPrefix="CC" TagName="Pager" Src="CCPager.ascx"%>
 <html>
   <head>
