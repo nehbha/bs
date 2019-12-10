@@ -1,4 +1,4 @@
-namespace Book_Store
+﻿namespace Book_Store
 {
 	
 //
@@ -205,10 +205,11 @@ ICollection editorial_categories_CreateDataSource() {
 	    iTmpI = editorial_categories_sCountSQL.ToLower().IndexOf(" order by");
 	    if (iTmpI > 1) editorial_categories_sCountSQL = editorial_categories_sCountSQL.Substring(0, iTmpI);
 	  }
-	  
-	  
+
+            System.Data.SqlClient.SqlDataAdapter c;
+
 	//-------------------------------
-	
+   
 	OleDbDataAdapter command = new OleDbDataAdapter(editorial_categories_sSQL, Utility.Connection);
 	DataSet ds = new DataSet();
 	
